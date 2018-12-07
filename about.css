@@ -1,0 +1,126 @@
+body {
+    display: grid;
+    grid-template-areas: "header" "navbar" "main" "footer";
+    text-align: center;
+    font-family: PT Sans;
+    background-color: #BBE6D8;
+}
+.title {
+    font-family: PT Sans medium;
+    font-size: 2em;
+    padding: 7px;
+}
+h1 {
+    font-size: 25px;
+}
+h2 {
+    width: 100%;
+    color: black;
+    font-size: 15px;
+    padding: 25px;
+}
+.header {
+    background-color: #E5A287;
+    grid-area: header;
+    position: fixed;
+    height: 55px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+.navbar {
+    background-color: #FF6761;
+    grid-area: navbar;
+    height: 80px;
+    width: 100%;
+    left: 0px;
+    z-index: 1;
+    position: fixed;
+    top: 55px;
+}
+.main {
+    grid-area: main;
+    position: relative;
+    top: 135px;
+    width: 600px;
+    margin: auto;
+    display: grid;
+    grid-template-areas: "content" "aside1" "aside2";
+}
+.content {
+    font-size: 30px;
+    grid-area: content;
+}
+.aside1 {
+    background-image: url("mom.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    grid-area: aside1;
+}
+.aside2 {
+    font-size: 30px;
+    grid-area: aside2;
+}
+.container {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+}
+a:link {
+    text-decoration: none;
+}
+.item {
+    background-color: white;
+    border: 2px solid black;
+    height: 45px;
+    width: 20%;
+    text-align: center;
+    padding: 0px;
+    top: 0px;
+}
+.item:hover{
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+.container2 {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 100%;
+}
+.item2 {
+    height: 180px;
+    width: 300px;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 1%;
+}
+#family {
+    background-image: url("family.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+.footer {
+    background-color: #E5A287;
+    grid-area: header;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+    grid-area: footer;
+}
+@media only screen and (max-width: 479px) {
+    .main {
+        width: 300px;
+    }
+}
